@@ -22,6 +22,8 @@ body {
   line-height: 1.6;
   overflow: hidden;
   scroll-behavior: smooth;
+  flex-flow: column;
+  display: flex;
 }
 
 .container {
@@ -70,7 +72,7 @@ body {
 
 .About {
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transition: opacity 650ms ease-in;
 }
 
 .Appear {
@@ -85,13 +87,11 @@ body {
 .columnMain {
   display: flex;
   flex-direction: column;
-  height: 150vh;
   width: 100%;
   flex-grow: 1;
 }
 
 .rowMain {
-  height: 50vh;
   display: flex;
   flex-direction: rwo;
   justify-content: center;
@@ -102,7 +102,7 @@ body {
   align-items: center;
   display: flex;
   flex-grow: 6;
-  padding: 3vh;
+  padding: 0vh;
 }
 
 .Left {
@@ -116,6 +116,7 @@ body {
   display: flex;
   flex-grow: 4;
   overflow-wrap: break-word;
+  padding-top: 3vh;
 }
 
 .SuperLeft {
@@ -123,7 +124,61 @@ body {
   align-items: center;
   display: flex;
   flex-grow: 6;
-  padding: 3vh;
+  padding: 10vh;
+  padding-bottom: 9vh;
+}
+
+.columnContact {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.HeaderContent {
+  display: flex;
+  height: 20vh;
+  width: 100%;
+}
+
+.ContactContentRow {
+  display: flex;
+  height: 75vh;
+  width: 100%;
+  padding-bottom: 10vh;
+}
+
+.temp {
+  flex-direction: column;
+  width: 33.333%;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.temp:hover {
+  color: skyblue;
+}
+.temp .fa-linkedin {
+  position: relative;
+  left: 7rem;
+  top: 5rem;
+}
+.temp .fa-envelope {
+  position: relative;
+  left: 7rem;
+  top: 5rem;
+}
+.temp .fa-github {
+  position: relative;
+  left: 7rem;
+  top: 5rem;
+}
+
+.contactinfo {
+  position: relative;
+  top: 7rem;
+  text-align: center;
+  padding: 1rem;
 }
 
 section {
@@ -153,20 +208,12 @@ section#home p {
 }
 
 section#about {
-  height: 200vh;
   display: flex;
 }
 section#about h1 {
   font-size: 3.5rem;
   position: relative;
-  top: 3vh;
-  left: -30vw;
-}
-
-section#contact h1 {
-  font-size: 3.5rem;
-  position: relative;
-  top: -25vh;
+  top: -3vh;
   left: -30vw;
 }
 
