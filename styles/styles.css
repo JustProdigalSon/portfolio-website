@@ -71,17 +71,14 @@ body {
 }
 
 .About {
+  top: 1%;
+  left: -25%;
   opacity: 0;
   transition: opacity 650ms ease-in;
 }
 
 .Appear {
   opacity: 1;
-}
-
-.textcontainer {
-  width: 30rem;
-  height: 50rem;
 }
 
 .columnMain {
@@ -93,6 +90,7 @@ body {
 
 .rowMain {
   display: flex;
+  height: 30%;
   flex-direction: rwo;
   justify-content: center;
 }
@@ -116,7 +114,6 @@ body {
   display: flex;
   flex-grow: 4;
   overflow-wrap: break-word;
-  padding-top: 3vh;
 }
 
 .SuperLeft {
@@ -124,28 +121,32 @@ body {
   align-items: center;
   display: flex;
   flex-grow: 6;
-  padding: 10vh;
-  padding-bottom: 9vh;
+  padding: 2%;
+  padding-bottom: 2%;
 }
 
 .columnContact {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+}
+.columnContact h1 {
+  left: 10%;
 }
 
 .HeaderContent {
   display: flex;
-  height: 20vh;
+  height: 20%;
   width: 100%;
 }
 
 .ContactContentRow {
   display: flex;
-  height: 75vh;
+  flex-direction: row;
+  height: 100%;
   width: 100%;
-  padding-bottom: 10vh;
+  padding-bottom: 10%;
 }
 
 .temp {
@@ -160,18 +161,22 @@ body {
 }
 .temp .fa-linkedin {
   position: relative;
-  left: 7rem;
+  left: 35%;
   top: 5rem;
 }
 .temp .fa-envelope {
   position: relative;
-  left: 7rem;
+  left: 35%;
   top: 5rem;
 }
 .temp .fa-github {
   position: relative;
-  left: 7rem;
+  left: 35%;
   top: 5rem;
+}
+.temp a, .temp a:hover, .temp a:visited, .temp a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 .contactinfo {
@@ -179,6 +184,9 @@ body {
   top: 7rem;
   text-align: center;
   padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
 }
 
 section {
@@ -188,6 +196,18 @@ section {
   justify-content: center;
   width: 100%;
   height: 100vh;
+}
+
+section#home {
+  height: 100%;
+}
+
+section#contact {
+  height: 75%;
+}
+
+section#about {
+  height: 100%;
 }
 
 section h1 {
@@ -210,13 +230,85 @@ section#home p {
 section#about {
   display: flex;
 }
-section#about h1 {
-  font-size: 3.5rem;
+
+.planet {
+  z-index: -1;
+  display: block;
+  width: 425px;
+  height: 425px;
   position: relative;
-  top: -3vh;
-  left: -30vw;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  background: #fcc96b;
+  background: #fcc96b;
+  background: linear-gradient(180deg, #fcc96b 0%, #fcc96b 15%, #f7ae01 15%, #f7ae01 19%, #fcc96b 19%, #fcc96b 22%, #f7ae01 22%, #f7ae01 28%, #fcc96b 28%, #fcc96b 31%, #fcc96b 33%, #fcc96b 36%, #f7ae01 36%, #f7ae01 48%, #fcc96b 48%, #fcc96b 55%, #f7ae01 55%, #f7ae01 66%, #fcc96b 66%, #fcc96b 70%, #f7ae01 70%, #f7ae01 73%, #fcc96b 73%, #fcc96b 82%, #f7ae01 82%, #c7ba9d 86%, #fcc96b 86%);
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25), inset 8px -4px 6px rgba(199, 128, 0, 0.5), inset -8px 4px 8px rgba(255, 235, 199, 0.5), inset 20px -5px 12px #f7ae01, 0 0 100px rgba(255, 255, 255, 0.3490196078);
+  transform: rotateZ(-15deg);
 }
 
+.planet::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 16px solid #e1a519;
+  border-top-width: 0;
+  border-radius: 50%;
+  box-shadow: 0 -2px 0 #c18620;
+  -webkit-animation: rings1 4.8s infinite linear;
+          animation: rings1 4.8s infinite linear;
+}
+
+.planet::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 8px solid #d48b0c;
+  border-top-width: 0;
+  border-radius: 50%;
+  box-shadow: 0 -2px 0 #b99309;
+  -webkit-animation: rings2 4.8s infinite linear;
+          animation: rings2 4.8s infinite linear;
+}
+
+@-webkit-keyframes rings1 {
+  0% {
+    transform: rotateX(65deg) rotateZ(0deg) scale(1.75);
+  }
+  100% {
+    transform: rotateX(65deg) rotateZ(360deg) scale(1.75);
+  }
+}
+
+@keyframes rings1 {
+  0% {
+    transform: rotateX(65deg) rotateZ(0deg) scale(1.75);
+  }
+  100% {
+    transform: rotateX(65deg) rotateZ(360deg) scale(1.75);
+  }
+}
+@-webkit-keyframes rings2 {
+  0% {
+    transform: rotateX(65deg) rotateZ(0deg) scale(1.7);
+  }
+  100% {
+    transform: rotateX(65deg) rotateZ(360deg) scale(1.7);
+  }
+}
+@keyframes rings2 {
+  0% {
+    transform: rotateX(65deg) rotateZ(0deg) scale(1.7);
+  }
+  100% {
+    transform: rotateX(65deg) rotateZ(360deg) scale(1.7);
+  }
+}
 /*un used--independent components*/
 /*.btn-con{
     display: flex;
