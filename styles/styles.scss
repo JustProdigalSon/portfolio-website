@@ -98,24 +98,26 @@ body{
 
 .SuperRight{
     flex: 2;
+    flex-shrink: 1;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     display: flex;
+    flex-grow: 1;
     //background-color: rgb(255, 127, 127);
-    flex-grow:  6;
     padding: 0vh;
 
 }
 .Left{
     flex: 1;
     display: flex;
-    flex-grow: 4;
     //background-color: darkslategray;
 }
 
 .Right{
     flex: 2;
     display: flex;
-    flex-grow: 4;
+    flex-grow: 1;
     overflow-wrap: break-word;
     //padding-top: 3vh;
     //background-color: darkslategray;
@@ -123,10 +125,10 @@ body{
 
 .SuperLeft{
     flex: 1;
-    align-items: center;
+    justify-content: center;
     display: flex;
+    flex-shrink: 1;
     // background-color: rgb(255, 127, 127);
-    flex-grow:  6;
     padding: 2%;
     padding-bottom: 2%;
 //     &:hover {
@@ -155,6 +157,24 @@ body{
 
 }
 
+.mobile{
+ display: none;
+}
+
+@media all and (max-width:723px) {
+   .mobile{
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.815);
+    font-size: 3rem;
+    justify-content: center;
+    background: linear-gradient(307deg, rgb(236, 12, 5) 0%, rgb(241, 170, 102) 100%);
+}
+    
+}
 
 .ContactContentRow{
     display: flex;
@@ -249,16 +269,6 @@ section#about {
     // }
 
 }
-
-
-
-
-
-section#contact {
-     
-}
-
-
 
 .planet {
     //opacity: 80%;
