@@ -173,6 +173,19 @@ body{
     justify-content: center;
     background: linear-gradient(307deg, rgb(236, 12, 5) 0%, rgb(241, 170, 102) 100%);
 }
+}
+@media all and (max-height:1070px) {
+    .mobile{
+     display: flex;
+     position: absolute;
+     z-index: 2;
+     height: 100%;
+     width: 100%;
+     color: rgba(255, 255, 255, 0.815);
+     font-size: 3rem;
+     justify-content: center;
+     background: linear-gradient(307deg, rgb(236, 12, 5) 0%, rgb(241, 170, 102) 100%);
+ }
     
 }
 
